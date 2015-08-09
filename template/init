@@ -1,0 +1,23 @@
+mv project.sublime-project {{basename}}.sublime-project
+joe sublimetext node > .gitignore
+echo 'dist\ndist_test\n' >> .gitignore
+
+npm install
+npm test
+npm run build
+npm run check
+
+
+gh re --new {{basename}}
+
+git init
+git remote add origin https://github.com/parro-it/{{basename}}.git
+
+
+echo 'licejs mit | head -n 3 >> readme.md'
+joe sublimetext node > .gitignore
+
+
+git add .
+git commit -m "project skeleton"
+git push --set-upstream origin master
