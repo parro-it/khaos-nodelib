@@ -13,7 +13,6 @@ gh re --new {{basename}}
 git init
 git remote add origin https://github.com/parro-it/{{basename}}.git
 
-
 echo 'licejs mit | head -n 3 >> readme.md'
 joe sublimetext node > .gitignore
 

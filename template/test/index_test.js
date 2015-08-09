@@ -3,11 +3,11 @@ if (process.env.TEST_RELEASE) {
   moduleRoot = '../dist';
 }
 
-const example = require(moduleRoot);
+const {{codeName}} = require(moduleRoot);
 
-describe('{{basename}}', () => {
+describe('{{codeName}}', () => {
   it('works', async () => {
-    const result = await example();
+    const result = await {{codeName}}();
     result.should.be.equal(42);
   });
 });

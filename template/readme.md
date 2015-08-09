@@ -10,6 +10,10 @@ npm install --save {{basename}}
 
 ## Usage
 
+```javascript
+  import {{codeName}} from '{{basename}}'
+```
+
 ## Credits
 
 ## License
