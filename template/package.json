@@ -2,6 +2,9 @@
   "name": "{{basename}}",
   "description": "",
   "repository": "https://github.com/{{username}}/{{basename}}.git",
+  "bugs": {
+    "url": "https://github.com/{{username}}/{{basename}}/issues"
+  },
   "version": "1.0.0",
   "main": "dist/index.js",
   "dependencies": {
@@ -14,7 +17,8 @@
     "build": "babel es6 --out-dir dist",
     "build-test": "babel test --out-dir dist_test",
     "lint": "eslint es6/*.js test/*.js",
-    "check": "npm run lint && npm run build && npm run build-test && npm run test-release"
+    "check": "npm run lint && npm run build && npm run build-test && npm run test-release",
+    "prepublish": "npm run check"
   },
   "eslintConfig": {
     "extends": "eslint-config-airbnb",
